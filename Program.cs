@@ -4,13 +4,10 @@ namespace ConsoleApplication
 {
   public class Program
   {
-      public static void SayHello()
-    {
-      "Hello world";
-    }
+    const string Say = "Hello world";
     public static void Main(string[] args)
     {
-      Console.WriteLine(SayHello());
+      Console.WriteLine(Say);
     }
   }
 }
