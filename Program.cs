@@ -8,10 +8,14 @@ namespace ConsoleApplication
     {
       string[] words = Program.Read("data/names.txt");
       Array.Sort(words);
+      Console.WriteLine(CalcAll(words));
+    }
+    private static int CalcAll(string[] words)
+    {
       int i = 1;
       int total = 0;
       foreach(string word in words) total += Program.TextValue(word) * i; i++;
-      Console.WriteLine(total);
+      return total;      
     }
     private static int TextValue(string word)
     {
