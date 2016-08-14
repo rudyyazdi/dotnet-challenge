@@ -8,7 +8,6 @@ namespace ConsoleApplication
     {
       string[] words = Program.Read("data/names.txt");
       Array.Sort(words);
-      char[] test = "woorrd".ToCharArray();
       Console.WriteLine(Program.TextValue("abC"));
     }
     private static int TextValue(string word)
