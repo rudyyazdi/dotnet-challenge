@@ -13,8 +13,7 @@ namespace ConsoleApplication
     }
     private static int CalcAll(string[] words)
     {
-      int i = 1;
-      int total = 0;
+      int i = 1; int total = 0;
       foreach(string word in words) total += Program.TextValue(word) * i; i++;
       return total;      
     }
