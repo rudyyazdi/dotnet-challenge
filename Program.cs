@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApplication
 {
@@ -19,8 +20,9 @@ namespace ConsoleApplication
     }
     private static int TextValue(string word)
     {
+      word = Regex.Replace(word.ToUpper(), @"[^A-Z]+", String.Empty);
       int res = 0;
-      foreach(char c in word) res += char.ToUpper(c) - 64;
+      foreach(char c in word) res += c - 64;
       return res;
     }
     private static string[] Read(string path)
