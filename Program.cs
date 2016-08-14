@@ -4,10 +4,12 @@ namespace ConsoleApplication
 {
   public class Program
   {
-    const string Say = "Hello world";
     public static void Main(string[] args)
     {
-      Console.WriteLine(Say);
+      var data = System.IO.File.ReadAllText("data/names.txt");
+      var words = data.Split(',');
+      foreach (var word in words)
+         Console.WriteLine(word);
     }
   }
 }
