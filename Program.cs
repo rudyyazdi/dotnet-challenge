@@ -9,15 +9,13 @@ namespace ConsoleApplication
       string[] words = Program.Read("data/names.txt");
       Array.Sort(words);
       char[] test = "woorrd".ToCharArray();
-      Console.WriteLine(Program.TextValue("worddd"));
-      int[] con1 = {1};
-      int[] con2 = {1};
-      int[] con3 = Program.Concat(con1, con2);
-      foreach(int w in con3) Console.WriteLine(w);
+      Console.WriteLine(Program.TextValue("abC"));
     }
     private static int TextValue(string word)
     {
-      return 3;
+      int res = 0;
+      foreach(char c in word) res += char.ToUpper(c) - 64;
+      return res;
     }
     private static string[] Read(string path)
     {
